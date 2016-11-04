@@ -1,2 +1,51 @@
 <!-- Controls display of single post viewed individually -->
 {{!< default}}
+
+{{#post}}
+{{navigation}}
+
+{{#if image}}<!-- WITH IMAGE -->
+
+  <div class="gs-img-header gs-gradient">
+      <header class="gs-post-header-light ">
+      <h1 class="gs-post-title" itemprop="headline">{{title}}</h1>
+      <h3 class="gs-post-info"> {{author.name}} | <time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h3>
+          {{#if tags}}
+              <div class="gs-post-tags">
+              {{tags separator=" | "}}
+              </div>
+          {{/if}}
+      </header>
+  </div>
+{{else}} <!-- WITHOUT IMAGE -->
+
+    <header class="gs-post-header-dark">
+        <h1 class="gs-post-title" itemprop="headline">{{title}}</h1>
+        <h3 class="gs-post-info"> {{author.name}} | <time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h3>
+            {{#if tags}}
+                <div class="gs-post-tags">
+                {{tags separator=" | "}}
+                </div>
+            {{/if}}
+    </header>
+{{/if}}
+
+
+<div class="gs-main-wrapper">
+    <main class="gs-main" role="main">
+        <article class="gs-article-container" role="article" itemscope itemtype="http://schema.org/Article">
+            <div class="gs-post-content" itemprop="articleBody">
+            {{content}}
+            </div>
+        </article>
+    </main>
+
+    {{#if pagination}}
+        <div class="pagination_uber">
+        {{{pagination}}}
+        </div>
+    {{/if}}
+</div>
+
+
+{{/post}}

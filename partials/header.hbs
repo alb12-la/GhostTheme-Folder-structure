@@ -1,0 +1,13 @@
+<div role='banner' class="gs-blog-header">
+    {{#if @blog.logo}}<a class="gs-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+    <h1 class="gs-blog-title">
+        <a title="{{@blog.title}}" href='{{@blog.url}}'>
+        {{{@blog.title}}}
+        </a>
+    </h1>
+      <p class="gs-blog-description">
+          <a title="{{@blog.title}}" href='{{@blog.url}}'>
+          {{@blog.description}}
+          </a>
+      </p>
+</div>
