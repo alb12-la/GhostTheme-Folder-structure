@@ -1,0 +1,29 @@
+<div class="gs-nav-wrapper">
+  <div class="gs-nav-container container">
+
+    {{#is "post"}} <!-- NAV MENU FOR POST -->
+
+        {{#if @blog.logo}}<a class="gs-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+            <ul class="gs-nav" >
+
+                <!-- Loop through the navigation items -->
+                {{#foreach navigation}}
+                <li class="gs-nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+                {{/foreach}}
+                <!-- End the loop -->
+            </ul>
+
+    {{else}}
+      <!-- NAV MENU FOR EVERYTIHING ELSE  // INCLUDES IMAGE HEADER-->
+          <ul class="gs-nav-center" >
+              <!-- Loop through the navigation items -->
+              {{#foreach navigation}}
+              <li class="gs-nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+              {{/foreach}}
+              <!-- End the loop -->
+          </ul>
+    {{/is}}
+
+
+    </div>
+</div>

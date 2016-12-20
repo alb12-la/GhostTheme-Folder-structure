@@ -2,14 +2,16 @@
 
 {{!< default}}
 {{> header}}
-
-<main class="gs-content-wrapper">
+{{navigation}}
+<main class="gs-content-wrapper container">
 {{#foreach posts}}
-
+<!-- WITH IMAGE -->
     <article class="gs-post-container col-md-12" role="article" itemscope itemtype="http://schema.org/Article">
       {{#if image}}
             <div class="gs-post-image col-md-6">
-              <img src="{{{image}}}" />
+              <a href="{{{url}}}" class="thumbnail">
+                  <img src="{{{image}}}" />
+              </a>
             </div>
 
             <div class="col-md-6 gs-post-content">
@@ -23,7 +25,8 @@
             </div>
 
       {{else}}
-      <div class="col-md-12 gs-post-content">
+      <!-- WITHOUT IMAGE -->
+      <div class="col-md-12 gs-post-content ">
             <header class="gs-post-header">
                 <h1 class="gs-post-title" itemprop="headline"> <a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
                 <h3 class="gs-post-info"> {{author.name}} | <time class="gs-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format=' MMM YYYY'}}</time></h3>
@@ -39,7 +42,7 @@
 
 {{/if}}
 
-<div class="col-md-12">
+<div class="col-md-12 gs-read-more">
     <a class="pull-right"; href="{{{url}}}" title="{{title}}" class="gs-read-more"><button type="button" class="btn btn-default gs-read-more-button">Read more</button></a>
 </div>
 

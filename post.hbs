@@ -5,36 +5,54 @@
 {{navigation}}
 
 {{#if image}}<!-- WITH IMAGE -->
+  <div class="gs-img-header gs-gradient" style="background: linear-gradient(0deg, rgba(6,6,6,.40), rgba(6,6,6,.09), transparent),url({{{image}}}); background-size:cover;">
+    <div class="gs-single-post-header-wrapper">
+          <header class="gs-single-post-header-light container ">
+          <h1 class="gs-single-post-title" itemprop="headline">{{title}}</h1>
+          <h4 class="gs-single-post-info"> {{author.name}} | <time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h4>
 
-  <div class="gs-img-header gs-gradient">
-      <header class="gs-post-header-light ">
-      <h1 class="gs-post-title" itemprop="headline">{{title}}</h1>
-      <h3 class="gs-post-info"> {{author.name}} | <time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h3>
-          {{#if tags}}
-              <div class="gs-post-tags">
-              {{tags separator=" | "}}
-              </div>
-          {{/if}}
-      </header>
+<!--SOCIAL-->
+
+<a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <span class="hidden">Twitter</span>
+</a>
+<a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <span class="hidden">Facebook</span>
+</a>
+<a class="fa fa-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+    <span class="hidden">Google+</span>
+</a>
+
+              {{#if tags}}
+                  <div class="gs-single-post-tags">
+                  {{tags separator=" | "}}
+                  </div>
+              {{/if}}
+          </header>
+    </div>
   </div>
 {{else}} <!-- WITHOUT IMAGE -->
-
-    <header class="gs-post-header-dark">
-        <h1 class="gs-post-title" itemprop="headline">{{title}}</h1>
-        <h3 class="gs-post-info"> {{author.name}} | <time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h3>
-            {{#if tags}}
-                <div class="gs-post-tags">
-                {{tags separator=" | "}}
-                </div>
-            {{/if}}
-    </header>
+<div class="gs-single-post-header-wrapper">
+      <header class="gs-single-post-header-dark container">
+          <h1 class="gs-single-post-title" itemprop="headline">{{title}}</h1>
+          <h4 class="gs-single-post-info"> {{author.name}} | <time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h4>
+              {{#if tags}}
+                  <div class="gs-single-post-tags">
+                  {{tags separator=" | "}}
+                  </div>
+              {{/if}}
+      </header>
+</div>
 {{/if}}
 
 
-<div class="gs-main-wrapper">
+<div class="gs-main-wrapper container">
     <main class="gs-main" role="main">
         <article class="gs-article-container" role="article" itemscope itemtype="http://schema.org/Article">
-            <div class="gs-post-content" itemprop="articleBody">
+            <div class="gs-single-post-content" itemprop="articleBody">
             {{content}}
             </div>
         </article>
@@ -46,6 +64,43 @@
         </div>
     {{/if}}
 </div>
+
+
+<div class="gs-prev-next container-fluid">
+
+  <div class="gs-fluid-width-container">
+      {{#prev_post}}
+        <a href="{{url}}">
+          <div class="col-md-6 ">
+          <!--<div class="col-md-6 "style="background: linear-gradient(0deg, rgba(6,6,6,.40), rgba(6,6,6,.09), transparent),url({{{image}}}); background-size:cover"> -->
+                <div class="gs-prev-post" >
+                  <h3>Previous Post:</h3>
+                    <h2>{{title}}</h2>
+                  <h4 class="gs-single-post-info"><time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h4>
+                </div>
+            </div>
+        </a>
+      {{/prev_post}}
+
+{{#next_post}}
+<a href="{{url}}">
+    <div class="col-md-6 ">
+      <div class="gs-next-post">
+          <h3>Next Post:</h3>
+            <h2>{{title}}</h2>
+          <h4 class="gs-single-post-info"><time class="gs-date" datetime="{{date format="MM-DD"}}" itemprop="datePublished">{{date format='MMM YYYY'}}</time></h4>
+      </div>
+    </div>
+    </a>
+{{/next_post}}
+
+  </div>
+
+</div>
+
+
+
+
 
 
 {{/post}}

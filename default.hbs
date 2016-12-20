@@ -13,21 +13,27 @@
 
     {{! Styles }}
     <!-- Latest compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700 " rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome/font-awesome.css" />
+    <!-- PRISIM --->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+
 
     {{! Responsive Meta Tags }}
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="gs-ghost_head">
+<div class="gs-ghost-head">
     {{ghost_head}}
 </div>
  <!--output important style and meta data in the head section.-->
 </head>
-  <body class="gs-body_class">
-      <div class="gs-body_wrapper">
+  <body class="gs-body-class">
+      <div class="gs-body-wrapper">
           {{{body}}}
       </div>
       {{> footer}}
