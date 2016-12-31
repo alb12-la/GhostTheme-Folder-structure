@@ -918,7 +918,13 @@ a {
   text-decoration: none;
 }
 
-/* line 23, ../../../../../sass/partials/_typography.scss */
+/* line 22, ../../../../../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+
+}
+
+/* line 27, ../../../../../sass/partials/_typography.scss */
 h1, h1 a, h1 a:focus {
   font-weight: 700;
   font-family: "Lato", sans-serif;
@@ -928,35 +934,35 @@ h1, h1 a, h1 a:focus {
   text-transform: capitalize;
 }
 
-/* line 31, ../../../../../sass/partials/_typography.scss */
+/* line 35, ../../../../../sass/partials/_typography.scss */
 h1 a:hover {
   color: #414141;
   text-decoration: none;
 }
 
-/* line 36, ../../../../../sass/partials/_typography.scss */
+/* line 40, ../../../../../sass/partials/_typography.scss */
 h4 {
   margin: .5em 0px;
 }
 
-/* line 44, ../../../../../sass/partials/_typography.scss */
+/* line 48, ../../../../../sass/partials/_typography.scss */
 .gs-post-info, .gs-single-post-info {
   font-size: .8em;
 }
 
-/* line 49, ../../../../../sass/partials/_typography.scss */
+/* line 53, ../../../../../sass/partials/_typography.scss */
 .gs-post-info, .gs-post-tags, .gs-single-post-info, .gs-single-post-tags {
   text-transform: capitalize;
 }
 
-/* line 58, ../../../../../sass/partials/_typography.scss */
+/* line 62, ../../../../../sass/partials/_typography.scss */
 .gs-post-tags a, .gs-post-tags a:hover, .gs-single-post-tags a, .gs-single-post-tags a:hover {
   font-size: .7em;
   text-transform: capitalize;
   text-decoration: none;
 }
 
-/* line 74, ../../../../../sass/partials/_typography.scss */
+/* line 78, ../../../../../sass/partials/_typography.scss */
 .gs-img-header {
   background-size: cover;
   position: relative;
@@ -964,39 +970,39 @@ h4 {
   height: 35vh;
 }
 
-/* line 80, ../../../../../sass/partials/_typography.scss */
+/* line 84, ../../../../../sass/partials/_typography.scss */
 .gs-single-post-header-dark {
   padding: 25px;
 }
 
-/* line 86, ../../../../../sass/partials/_typography.scss */
+/* line 90, ../../../../../sass/partials/_typography.scss */
 .gs-img-header .gs-single-post-header-wrapper {
   position: absolute;
   width: 100%;
   bottom: 25px;
 }
 
-/* line 94, ../../../../../sass/partials/_typography.scss */
+/* line 98, ../../../../../sass/partials/_typography.scss */
 .gs-single-post-header, .gs-single-post-header-light, .gs-single-post-header-dark {
   width: 920px;
 }
-/* line 96, ../../../../../sass/partials/_typography.scss */
+/* line 100, ../../../../../sass/partials/_typography.scss */
 .gs-single-post-header h1, .gs-single-post-header-light h1, .gs-single-post-header-dark h1 {
   font-size: 3.5em;
 }
 
-/* line 105, ../../../../../sass/partials/_typography.scss */
+/* line 109, ../../../../../sass/partials/_typography.scss */
 .gs-single-post-header-light h1, .gs-single-post-header-light h1, .gs-single-post-header-light h4, .gs-single-post-header-light a, .gs-single-post-header-light .gs-single-post-tags {
   color: #ffffff;
   text-shadow: 2px 2px rgba(25, 23, 23, 0.39);
 }
 
-/* line 116, ../../../../../sass/partials/_typography.scss */
+/* line 120, ../../../../../sass/partials/_typography.scss */
 .gs-single-post-header-dark h1, .gs-single-post-header-dark h1, .gs-single-post-header-dark h4, .gs-single-post-header-dark a {
   color: #414141;
 }
 
-/* line 120, ../../../../../sass/partials/_typography.scss */
+/* line 124, ../../../../../sass/partials/_typography.scss */
 .gs-main-wrapper {
   max-width: 920px;
 }
